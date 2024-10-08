@@ -1,4 +1,4 @@
-import time
+import time, volume, massa, comprimento
 
 def main():
     """
@@ -22,57 +22,46 @@ def main():
         for option in options:
             print(option)
         
-        try:
-            escolha = input("Digite sua escolha: ")
+        escolha = input("Digite sua escolha: ")
 
-            if escolha == "0":  # Sai do programa quando a escolha é 0
-                print("Saindo do programa.")
-                break
+        if escolha == "0":  # Sai do programa quando a escolha é 0
+            print("Saindo do programa.")
+            time.sleep(1)
+            break
 
-            if escolha == "1":
-                metros = float(input("Digite o valor em metros: "))
-                quilometros = None
-                print(f"{metros} metros são {quilometros} quilômetros.")
+        if escolha == "1":
+            metros = float(input("Digite o valor em metros: "))
+            quilometros = comprimento.converte_m2km(metros)
+            print(f"{metros} metros são {quilometros} quilômetros.")
                 
-            elif escolha == "2":
-                quilometros = float(input("Digite o valor em quilômetros: "))
-                metros = None
-                print(f"{quilometros} quilômetros são {metros} metros.")
+        elif escolha == "2":
+            quilometros = float(input("Digite o valor em quilômetros: "))
+            metros = comprimento.converte_km2m(quilometros)
+            print(f"{quilometros} quilômetros são {metros} metros.")
 
-            elif escolha == "3":
-                gramas = float(input("Digite o valor em gramas: "))
-                quilogramas = None
-                print(f"{gramas} gramas são {quilogramas} quilogramas.")
+        elif escolha == "3":
+            gramas = float(input("Digite o valor em gramas: "))
+            quilogramas = massa.converte_g_para_Kg(gramas)
+            print(f"{gramas} gramas são {quilogramas} quilogramas.")
             
-            elif escolha == "4":
-                quilogramas = float(input("Digite o valor em quilogramas: "))
-                gramas = None
-                print(f"{quilogramas} quilogramas são {gramas} gramas.")
+        elif escolha == "4":
+            quilogramas = float(input("Digite o valor em quilogramas: "))
+            gramas = massa.converte_Kg_para_g(quilogramas)
+            print(f"{quilogramas} quilogramas são {gramas} gramas.")
 
-            elif escolha == "5":
-                litros = float(input("Digite o valor em litros: "))
-                mililitros = None
-                print(f"{litros} litros são {mililitros} mililitros.")
+        elif escolha == "5":
+            litros = float(input("Digite o valor em litros: "))
+            mililitros = volume.volume_litros_para_mili(litros)
+            print(f"{litros} litros são {mililitros} mililitros.")
 
-            elif escolha == "6":
-                mililitros = float(input("Digite o valor em mililitros: "))
-                litros = None
-                print(f"{mililitros} mililitros são {litros} litros.")
+        elif escolha == "6":
+            mililitros = float(input("Digite o valor em mililitros: "))
+            litros = volume.volume_mili_para_litros(mililitros)
+            print(f"{mililitros} mililitros são {litros} litros.")
 
-            elif escolha == "7":
-                kmph = float(input("Digite o valor em km/h: "))
-                mps = None
-                print(f"{kmph} km/h são {mps} m/s.")
-
-            elif escolha == "8":
-                mps = float(input("Digite o valor em m/s: "))
-                kmph = None
-                print(f"{mps} m/s são {kmph} km/h.")
-
-            else:
-                print("Escolha inválida. Por favor, tente novamente.")
-        except ValueError:
+        else:
             print("Escolha inválida. Por favor, tente novamente.")
-# ----------------------------------------------------------------------------------------
+            time.sleep(1)
+#-------------------------------------------------------------
 if __name__ == "__main__":  # Garante que se o módulo for importado não será executado
     main()  # Chamada da função principal
