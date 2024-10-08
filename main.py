@@ -21,9 +21,14 @@ def main():
         ]
         for option in options:
             print(option)
-        
-        escolha = input("Digite sua escolha: ")
-        os.system('cls')
+        try:
+            escolha = input("Digite sua escolha: ")
+            os.system('cls')
+        except ValueError:
+            print('-'*50)
+            print("Escolha inválida. Por favor, tente novamente.")
+            print('-'*50)
+            time.sleep(1)         
 
         if escolha == "0":  # Sai do programa quando a escolha é 0
             print('-'*50)
