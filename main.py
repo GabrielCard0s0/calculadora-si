@@ -41,7 +41,9 @@ def main():
             if escolha == "1":
                 metros = float(input("Digite o valor em metros: "))
                 quilometros = comprimento.converte_m2km(metros)
+                time.sleep(1) 
                 os.system('cls')
+                time.sleep(1) 
                 print('-'*50)
                 print(f"{metros} metros são {quilometros} quilômetros.")
                 print('-'*50)
@@ -49,7 +51,9 @@ def main():
             elif escolha == "2":
                 quilometros = float(input("Digite o valor em quilômetros: "))
                 metros = comprimento.converte_km2m(quilometros)
+                time.sleep(1) 
                 os.system('cls')
+                time.sleep(1) 
                 print('-'*50)
                 print(f"{quilometros} quilômetros são {metros} metros.")
                 print('-'*50)
@@ -57,7 +61,9 @@ def main():
             elif escolha == "3":
                 gramas = float(input("Digite o valor em gramas: "))
                 quilogramas = massa.converte_g_para_Kg(gramas)
+                time.sleep(1) 
                 os.system('cls')
+                time.sleep(1) 
                 print('-'*50)
                 print(f"{gramas} gramas são {quilogramas} quilogramas.")
                 print('-'*50)
@@ -65,7 +71,9 @@ def main():
             elif escolha == "4":
                 quilogramas = float(input("Digite o valor em quilogramas: "))
                 gramas = massa.converte_Kg_para_g(quilogramas)
+                time.sleep(1) 
                 os.system('cls')
+                time.sleep(1) 
                 print('-'*50)
                 print(f"{quilogramas} quilogramas são {gramas} gramas.")
                 print('-'*50)
@@ -73,7 +81,9 @@ def main():
             elif escolha == "5":
                 litros = float(input("Digite o valor em litros: "))
                 mililitros = volume.volume_litros_para_mili(litros)
+                time.sleep(1) 
                 os.system('cls')
+                time.sleep(1) 
                 print('-'*50)
                 print(f"{litros} litros são {mililitros} mililitros.")
                 print('-'*50)
@@ -81,12 +91,15 @@ def main():
             elif escolha == "6":
                 mililitros = float(input("Digite o valor em mililitros: "))
                 litros = volume.volume_mili_para_litros(mililitros)
+                time.sleep(1) 
                 os.system('cls')
+                time.sleep(1) 
                 print('-'*50)
                 print(f"{mililitros} mililitros são {litros} litros.")
                 print('-'*50)
 
             else:
+                time.sleep(1) 
                 os.system('cls')
                 print('-'*50)
                 print("Escolha inválida. Por favor, tente novamente.")
@@ -94,6 +107,7 @@ def main():
                 time.sleep(1)
                 
         except ValueError:
+            time.sleep(1) 
             os.system('cls')
             print('-'*50)
             print("Escolha inválida. Por favor, tente novamente.")
