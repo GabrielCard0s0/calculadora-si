@@ -9,7 +9,8 @@ def main():
         print("## CALCULADORA DO SISTEMAS INTERNACIONAL DE UNIDADES ##")
         print("#######################################################")
         print("\nEscolha uma conversão:")
-        options = [
+
+        options = [ #lista de opções
             "1. Comprimento (m para km)",
             "2. Comprimento (km para m)",
             "3. Massa (g para kg)",
@@ -19,7 +20,7 @@ def main():
             "0. Sair"
 
         ]
-        for option in options:
+        for option in options: #printa as opções que foram colocadas na lista options
             print(option)
         try:
             escolha = input("Digite sua escolha: ")
@@ -45,9 +46,7 @@ def main():
                 time.sleep(1) 
                 os.system('cls')
                 time.sleep(1) 
-                
-                digitar.texto(f"{metros} metros são {quilometros} quilômetros.")
-                
+                digitar.texto(f"{metros} metros são {quilometros} quilômetros.")  
                 time.sleep(1)
                     
             elif escolha == "2":
@@ -57,9 +56,7 @@ def main():
                 time.sleep(1) 
                 os.system('cls')
                 time.sleep(1) 
-                
                 digitar.texto(f"{quilometros} quilômetros são {metros} metros.")
-                
                 time.sleep(1)
 
             elif escolha == "3":
@@ -69,9 +66,7 @@ def main():
                 time.sleep(1) 
                 os.system('cls')
                 time.sleep(1) 
-                
                 digitar.texto(f"{gramas} gramas são {quilogramas} quilogramas.")
-                
                 time.sleep(1)
                 
             elif escolha == "4":
@@ -81,9 +76,7 @@ def main():
                 time.sleep(1) 
                 os.system('cls')
                 time.sleep(1) 
-                
                 digitar.texto(f"{quilogramas} quilogramas são {gramas} gramas.")
-                
                 time.sleep(1)
 
             elif escolha == "5":
@@ -93,9 +86,7 @@ def main():
                 time.sleep(1) 
                 os.system('cls')
                 time.sleep(1) 
-                
                 digitar.texto(f"{litros} litros são {mililitros} mililitros.")
-                
                 time.sleep(1)
 
             elif escolha == "6":
@@ -105,25 +96,19 @@ def main():
                 time.sleep(1) 
                 os.system('cls')
                 time.sleep(1) 
-                
                 digitar.texto(f"{mililitros} mililitros são {litros} litros.")
-                
                 time.sleep(1)
 
             else:
                 time.sleep(1) 
                 os.system('cls')
-                
                 digitar.texto("Escolha inválida. Por favor, tente novamente.")
-                
                 time.sleep(1)
                 
         except ValueError:
             time.sleep(1)
             os.system('cls')
-            
             digitar.texto("Escolha inválida. Por favor, tente novamente.")
-            
             time.sleep(1)
 #-------------------------------------------------------------
 if __name__ == "__main__":  # Garante que se o módulo for importado não será executado
