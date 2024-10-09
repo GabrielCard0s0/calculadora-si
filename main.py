@@ -47,6 +47,7 @@ def main():
                 print('-'*50)
                 print(f"{metros} metros são {quilometros} quilômetros.")
                 print('-'*50)
+                time.sleep(1)
                     
             elif escolha == "2":
                 quilometros = float(input("Digite o valor em quilômetros: "))
@@ -57,6 +58,7 @@ def main():
                 print('-'*50)
                 print(f"{quilometros} quilômetros são {metros} metros.")
                 print('-'*50)
+                time.sleep(1)
 
             elif escolha == "3":
                 gramas = float(input("Digite o valor em gramas: "))
@@ -67,6 +69,7 @@ def main():
                 print('-'*50)
                 print(f"{gramas} gramas são {quilogramas} quilogramas.")
                 print('-'*50)
+                time.sleep(1)
                 
             elif escolha == "4":
                 quilogramas = float(input("Digite o valor em quilogramas: "))
@@ -77,6 +80,7 @@ def main():
                 print('-'*50)
                 print(f"{quilogramas} quilogramas são {gramas} gramas.")
                 print('-'*50)
+                time.sleep(1)
 
             elif escolha == "5":
                 litros = float(input("Digite o valor em litros: "))
@@ -87,6 +91,7 @@ def main():
                 print('-'*50)
                 print(f"{litros} litros são {mililitros} mililitros.")
                 print('-'*50)
+                time.sleep(1)
 
             elif escolha == "6":
                 mililitros = float(input("Digite o valor em mililitros: "))
@@ -97,6 +102,7 @@ def main():
                 print('-'*50)
                 print(f"{mililitros} mililitros são {litros} litros.")
                 print('-'*50)
+                time.sleep(1)
 
             else:
                 time.sleep(1) 
